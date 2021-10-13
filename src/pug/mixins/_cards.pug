@@ -1,0 +1,45 @@
+mixin statistic-card(summ, desk, addClass)
+	a.statistic-card( href="#!")
+		span.title-3(class=""+addClass) #{summ} ₽
+		span.text-14 #{desk}
+		span.text-link Подробнее
+
+mixin myAssets
+	a(href="one-assets-card.html").assets-card.assets-card--big
+		.assets-card__img
+			img(src="./img/assets1.jpg", width="40" alt="img")
+		.assets-card_info
+			.assets-card__header.d-flex
+				.assets-card_col
+					h4.text-16 GAME SLOT #32489
+					p.text-12 Axie Infinity
+				.assets-card_col
+					p.text-10 Баланс
+					p.text-16 7 000 ₽
+					p.text-12 709 SLP
+			.assets-card__body
+				.referral-block__info
+					p.text-small Стоимость активов
+					.assets-info.d-flex
+						.assets-info__left.d-flex
+							p.text-14 167 000 ₽
+							span
+								+tranding
+						.assets-info__right
+							p / 0,24 ETH
+			.assets-card__footer
+				.assets-card__types
+					p.text-small Активы
+					.d-flex
+						.assets-types.d-flex
+							.assets-types__item
+								img(src="./img/assets-card.png",  width="40" alt="img")
+							.assets-types__item
+								img(src="./img/assets-card.png",  width="40" alt="img")
+							.assets-types__item
+								img(src="./img/assets-card.png",  width="40" alt="img")
+							.assets-types__item
+								img(src="./img/assets-card2.png",  width="40" alt="img")
+						
+						.icon-btn
+							+card-arrow

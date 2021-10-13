@@ -1,0 +1,88 @@
+.page-content__frame.active(data-content="pulse")
+	.page-content__pulse
+		//======= КАРТОЧКИ СТАТИСТИКИ ===========
+		.user-profile__statistic
+			.statistic-cards
+				+statistic-card('453 000', 'Накоплено')
+				+statistic-card('23 292', 'С рефералов', 'text-green')
+				+statistic-card('435 000', 'Инвестировано')
+				+statistic-card('1 435 000', 'Было выплачено')
+				+statistic-card('2 435 000', 'Стоимость активов')
+		//======= КОНЕЦ КАРТОЧКИ СТАТИСТИКИ ===========
+		
+		.user-profile__section
+			//========= ПРАВАЯ КОЛОНКА НА ДЕСКТОПЕ============
+			.user-profile__section-right
+				//========= ДОСТУПНО К ВЫВОДУ ============
+				.available-card
+					.available-card__text
+						p Доступно к выводу
+					.flex-column
+						.available-card__summ
+							span.text-16 123 849₽
+							span.text-12 1 034 SLP
+						.available-card__button
+							a(href="withdrawal.html").icon-btn
+								+finance
+				//========= ПРИГЛАСИ ДРУГА ============
+				.cta-card
+					button.close
+						span +
+					.cta-card__text.text-12
+						p Позови друзей и&nbsp;зарабатывай больше
+					.flex-column
+						.cta-card__summ.text-24 +3%
+						.text-12
+							p от дохода друзей
+			
+			//========= ЛЕВАЯ КОЛОНКА НА ДЕСКТОПЕ============
+			.user-profile__section-left
+				//========= КАРТОЧКИ АКТИВЫ ============
+				.assets-block
+					.assets-block__title
+						h2.title-3 Активы
+						.assets-block__subtitle.d-flex
+							p.text-12 Проект
+							p.text-12 Доступно к выводу
+					.assets-block__cards
+						
+						//========= ОДНА КАРТОЧКА АКТИВА ============
+						a(href="#!").assets-card
+							.assets-card__left.d-flex
+								.assets-card__img
+									img(src="./img/assets1.jpg", width="40" alt="img")
+								.assets-card__text
+									p.text-16 Axie Infinity
+									p.text-12 Игровой проект
+
+							.assets-card__right
+								.available-card__summ
+									span.text-16 237 000₽
+									span.text-12 109 SLP
+
+						//========= ОДНА КАРТОЧКА АКТИВА ============
+						a(href="#!").assets-card
+							.assets-card__left.d-flex
+								.assets-card__img
+									img(src="./img/assets2.jpg", width="40" alt="img")
+								.assets-card__text
+									p.text-16 SLP Invest
+									p.text-12 Игровые пулы
+
+							.assets-card__right
+								.available-card__summ
+									span.text-16 1 137 000₽
+									span.text-12 1 034 SLP
+						//========= ОДНА КАРТОЧКА АКТИВА ============
+						a(href="#!").assets-card
+							.assets-card__left.d-flex
+								.assets-card__img
+									img(src="./img/assets2.jpg", width="40" alt="img")
+								.assets-card__text
+									p.text-16 Mix Game Pool
+									p.text-12 Игровые пулы
+
+							.assets-card__right
+								.available-card__summ
+									span.text-16 137 000₽
+									span.text-12 39 SLP

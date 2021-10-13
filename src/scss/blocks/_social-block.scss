@@ -1,0 +1,20 @@
+/*========================
+икноки соцсетей
+============================*/
+.social-block{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	a{
+		display: block;
+		&:hover{
+			opacity: .5;
+		}
+	}
+
+	
+}
+.social .title-small{
+		margin-bottom: 8px;
+	}

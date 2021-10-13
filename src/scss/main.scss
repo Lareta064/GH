@@ -1,0 +1,20 @@
+@import "base/_var";
+@import "base/_base";
+@import "base/_buttons";
+
+//sections
+@import "sections/header";
+@import "sections/header-login";
+//blocks
+@import "blocks/social-block";
+@import "blocks/custom-select";
+@import "blocks/aside-menu";
+@import "blocks/cards";
+
+
+//sections
+@import "sections/form-1";
+@import "sections/user-profile";
+@import "sections/one-assets-card";
+@import "sections/one-assets-type";
+@import "sections/chat.scss";

@@ -1,0 +1,206 @@
+section.form-block(data-form="1")
+	.container-slim
+		button.close-block( type="button" data-close) 
+			span +
+		.form-block__header
+			button.form-block__header-arrow( type="button" data-close)
+				+arrow-right
+			h2.title-2 Авторизация
+			button.button(type=	"button"  data-btn="1") Вход
+		.form-block__img
+			img(src="img/login.png", width="168" alt="img")
+		
+		.form-block__body
+			.form-block__body-header
+				h3.title-3 Укажите телефон для входа
+			form(action="")
+				.form-item
+					label Моб. телефон
+					input.phone(type="text" name="phone" placeholder="+7(___)___-__-__")
+					// === svg ====
+					span.input-icon
+						+icon-phone 
+				.form-item.form-item--btn
+					button.btn.btn--icon(type="button" data-btn="2") Продолжить
+			include ../ui/_social
+
+
+//======= Окно об сообщении отправки смс для подтверждния =========
+section.form-block(data-form="2")
+	.container-slim
+		button.close-block( type="button" data-close) 
+			span +
+		.form-block__header
+			button.form-block__header-arrow( type="button" data-close)
+				+arrow-right
+			h2.title-2 Авторизация
+			button.button(type=	"button"  data-btn="1") Вход
+			
+		.form-block__img
+			img(src="img/confirm.png", width="168" alt="img")
+		
+		.form-block__body
+			.form-block__body-header
+				h3.title-3 Подтверждение по SMS
+				p Мы отправим SMS код для проверки на Ваш телефон #[span + 7 (***) ***-34-44]
+			
+				.form-item.form-item--btn
+					button.btn.btn--icon(type="button" data-btn="3") Отправить SMS
+
+//======= Окно для ввода цифр из СМС =========
+section.form-block(data-form="3")
+	.container-slim
+		button.close-block( type="button" data-close) 
+			span +
+		.form-block__header
+			button.form-block__header-arrow( type="button" data-close)
+				+arrow-right
+			h2.title-2 Авторизация
+			button.button(type=	"button"  data-btn="1") Вход
+			
+		.form-block__img
+			img(src="img/smsCode.png", width="168" alt="img")
+		
+		.form-block__body
+			.form-block__body-header
+				h3.title-3 Введите код
+				
+				form(action="")
+					.form-item.form-item--code
+						input(type="text" name="confirm_code" tab-index="1")
+						input(type="text" name="confirm_code" tab-index="2")
+						input(type="text" name="confirm_code" tab-index="3")
+						input(type="text" name="confirm_code" tab-index="4")
+						input(type="text" name="confirm_code" tab-index="5")
+						input(type="text" name="confirm_code" tab-index="6")
+					.form-item__text
+						p Мы отправим SMS код для проверки на Ваш телефон #[span + 7 (***) ***-34-44]
+						button.btn-text(type="button" data-btn="4") Отправить код ещё раз
+
+//======= Окно успешной регистрации =========
+section.form-block.form-block--success(data-form="4")
+	.container-slim
+		button.close-block( type="button" data-close) 
+			span +
+		.form-block__header
+			button.form-block__header-arrow( type="button" data-close)
+				+arrow-right
+			h2.title-2 Авторизация
+			button.button(type=	"button"  data-btn="1") Вход
+			
+		.form-block__img.form-block__img--round
+			+check
+		
+		.form-block__body
+			.form-block__body-header
+				h3.title-3 Спасибо за регистрацию
+			.form-block__body-text
+				p Наши основатели скоро с вами свяжутся от тг аккаунта @ldmco или @MASflor
+			.form-item.form-item--btn
+				a.btn.btn--icon(href="#!" ) Наш телеграмм
+
+//======= Окно подтверждения имени =========
+section.form-block.visible(data-form="5")
+	.container-slim
+		button.close-block( type="button" data-close) 
+			span +
+		.form-block__header
+			button.form-block__header-arrow( type="button" data-close)
+				+arrow-right
+			h2.title-2 Авторизация
+			button.button(type=	"button"  data-btn="1") Вход
+			
+		.form-block__img
+			img(src="./img/avatar.jpg", width="112" alt="avatar")
+		
+		.form-block__body
+			.form-block__body-header
+				p Вы авторизировались, как
+				h3.title-3 Мария Иванова?
+				.user-phoneNumber
+					p.text-14 Номер телефона:
+					p +7 *** *** - 34 - 44  
+			
+			.form-item.form-item--btn
+				a.btn(href="#!" ) Да, все верно
+				button.btn.btn--light Нет, вы ошиблись
+				
+//======= Окно чата с техподдержкой =========
+section.form-block.form-block--chat.visible(data-form="5")
+	.container-slim
+		button.close-block( type="button" data-close) 
+			span +
+		.form-block__header
+			button.form-block__header-arrow( type="button" data-close)
+				+arrow-right
+			h2.title-2 Поддержка
+			
+			.header__user-menu
+				.user-menu__item.user-menu__currency
+					.custom-select
+						.select-icon
+							+carret
+						.select-field
+							input(type="text" value="₽" readonly)
+						.select-list
+							ul
+								li.current(data-role="₽") ₽
+								li(data-role="$") $
+								li(data-role="€") €
+				.user-menu__item.user-menu__notify
+					.notify-alert
+					span
+						+notify
+				.user-menu__item.user-menu__ava
+					img(src="./img/profile-avatar.jpg", width="40" alt="user")
+
+		.chat-block
+			//========= один блок чата ===========
+			.chat-block__list
+				h5 Вчера
+				.chat-block__list-item
+					.chat-text.chat-text--user
+						.chat-text__time 01:15 PM
+						.chat-text__content
+							p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+					
+					.chat-text.chat-text--manager
+						.chat-text__avatar
+							img(src="./img/chat.jpg", width="40" alt="img")
+
+						.chat-text__time 01:15 PM
+						.chat-text__content
+							span Ирина Иванова (менеджер)
+							p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+			
+			//========= один блок чата ===========
+			.chat-block__list
+				h5 Сегодня
+				.chat-block__list-item
+					.chat-text.chat-text--user
+						.chat-text__time 01:15 PM
+						.chat-text__content
+							p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+					.chat-text.chat-text--manager
+						.chat-text__avatar
+							img(src="./img/chat.jpg", width="40" alt="img")
+
+						.chat-text__time 01:15 PM
+						.chat-text__content
+							p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+		
+		//======= ввод сообщение ========
+		.chat-form-wrapper
+			form.chat-form(action="")
+				.chat-form-attach
+					label(for="chat-attach")
+						input#chat-attach(type="file" )
+					
+				.chat-form-input
+					input(type="text" placeholder="Напишите сообщение")
+				
+				.chat-form-right.d-flex
+					.chat-form-mic
+						button(type="button")
+					.chat-form-btn
+						button(type="submit")

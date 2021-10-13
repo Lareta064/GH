@@ -1,0 +1,93 @@
+.user-profile
+	//========================= HEADER ====================
+	.header-top.header-top--profile.header-top--inner
+		.header-top__content
+			// ===== menu icon ======
+			.header-top__icon
+				+menuIcon
+			// ===== LOGO ======
+			a(href="#!").logo
+				span
+					+logo
+				span игровой майнинг отель
+			.profile-tab-title
+				button.form-block__header-arrow( type="button" data-close)
+					+arrow-right
+				h2.title-2 Поддержка
+			// ===== user-block ======
+			.header__user-menu
+				.user-menu__item.user-menu__currency
+					.custom-select
+						.select-icon
+							+carret
+						.select-field
+							input(type="text" value="₽" readonly)
+						.select-list
+							ul
+								li.current(data-role="₽") ₽
+								li(data-role="$") $
+								li(data-role="€") €
+				.user-menu__item.user-menu__notify
+					.notify-alert
+					span
+						+notify
+				.user-menu__item.user-menu__ava
+					img(src="./img/profile-avatar.jpg", width="40" alt="user")
+	//============================ page content ===========================
+	.page-content.d-flex
+		//================ sidebar ==================
+		.page-content__sidebar
+			include ../blocks/_aside-menu
+
+		//================ main content ==================
+		.user-profile__tabs
+			.page-content__frame.active
+				.page-content__chat
+					.chat-block 
+						//========= один блок чата ===========
+						.chat-block__list
+							h5 Вчера
+							.chat-block__list-item
+								.chat-text.chat-text--user
+									.chat-text__time 01:15 PM
+									.chat-text__content
+										p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+								
+								.chat-text.chat-text--manager
+									.chat-text__avatar
+										img(src="./img/chat.jpg", width="40" alt="img")
+
+									.chat-text__time 01:15 PM
+									.chat-text__content
+										span Ирина Иванова (менеджер)
+										p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+						
+						//========= один блок чата ===========
+						.chat-block__list
+							h5 Сегодня
+							.chat-block__list-item
+								.chat-text.chat-text--user
+									.chat-text__time 01:15 PM
+									.chat-text__content
+										p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+								.chat-text.chat-text--manager
+									.chat-text__avatar
+										img(src="./img/chat.jpg", width="40" alt="img")
+
+									.chat-text__time 01:15 PM
+									.chat-text__content
+										p Sed ligula erat,mauris sit eros a viverra amet dictum id?
+					.chat-form-wrapper
+						form.chat-form(action="")
+							.chat-form-attach
+								label(for="chat-attach")
+									input#chat-attach(type="file" )
+								
+							.chat-form-input
+								input(type="text" placeholder="Напишите сообщение")
+							
+							.chat-form-right.d-flex
+								.chat-form-mic
+									button(type="button")
+								.chat-form-btn
+									button(type="submit")

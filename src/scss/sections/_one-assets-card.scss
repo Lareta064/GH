@@ -1,0 +1,80 @@
+/*========= СТРАНИЦА АКТИВА=======*/
+.slot-card{
+	padding: 16px;
+	display: flex;
+	width: 340px;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.01),
+	0px 4px 8px rgba(0, 0, 0, 0.02),
+	0px 1px 12px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	.slot-card__img{
+		padding-right: 16px;
+		flex-shrink: 0;
+	}
+	.slot-card__btn{
+		background: #FFFFFF;
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.01),
+		0px 4px 8px rgba(0, 0, 0, 0.02),
+		0px 1px 12px rgba(0, 0, 0, 0.12);
+		border-radius: 4px;
+		color: $text;
+		display: inline-block;
+		text-transform: uppercase;
+		padding-left: 12px;
+		padding-right: 12px;
+		margin-left: auto;
+		font-family: $med;
+		transition: .3s;
+		&:hover{
+			box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2),
+			0px 4px 8px rgba(0, 0, 0, 0.04),
+			0px 1px 12px rgba(0, 0, 0, 0.12);
+		}
+		
+	}
+	.slot-card__info{
+		flex-grow: 2;
+	}
+	
+	.slot-card__title p{
+		width: 135px;
+		white-space: nowrap;
+		overflow:hidden;
+		text-overflow: ellipsis;
+	}
+	.assets-info__left .text-12 {
+		color: $text;
+		font-family: $bold;
+	}
+	.assets-info__right{
+		opacity: .54;
+		
+	}
+}
+
+.slot-card__info-row+.slot-card__info-row{margin-top: 4px;}
+.slot-block__cards {
+	display: grid;
+	grid-template-columns: repeat(1, 340px);
+	row-gap: 16px;
+	@media(min-width:992px){
+		grid-template-columns: repeat(2, 340px);
+		column-gap: 16px;
+	}
+	@media(min-width:1440px) {
+		grid-template-columns: repeat(3, 340px);
+	}
+}
+@media(min-width:992px) and(max-width: 1050px) {
+	.assets-card.assets-card--big,
+	.slot-card {
+		padding-left: 8px;
+		padding-right: 8px;
+		max-width: 325px;
+	}
+	
+	.slot-block__cards {
+		column-gap: 0px;
+	}
+}

@@ -1,0 +1,126 @@
+.user-profile
+	//========================= HEADER ====================
+	.header-top.header-top--profile.header-top--inner
+		.header-top__content
+			// ===== menu icon ======
+			.header-top__icon
+				+menuIcon
+			// ===== LOGO ======
+			a(href="#!").logo
+				span
+					+logo
+				span игровой майнинг отель
+			.profile-tab-title
+				button.form-block__header-arrow( type="button" data-close)
+					+arrow-right
+				h2.title-2 GAME SLOT #34
+			// ===== user-block ======
+			.header__user-menu
+				.user-menu__item.user-menu__currency
+					.custom-select
+						.select-icon
+							+carret
+						.select-field
+							input(type="text" value="₽" readonly)
+						.select-list
+							ul
+								li.current(data-role="₽") ₽
+								li(data-role="$") $
+								li(data-role="€") €
+				.user-menu__item.user-menu__notify
+					.notify-alert
+					span
+						+notify
+				.user-menu__item.user-menu__ava
+					img(src="./img/profile-avatar.jpg", width="40" alt="user")
+	//============================ page content ===========================
+	.page-content.d-flex
+		//================ sidebar ==================
+		.page-content__sidebar
+			include ../blocks/_aside-menu
+
+		//================ main content ==================
+		.user-profile__tabs
+			.page-content__frame.active
+				.page-content__assets-card
+					h2.title-2.title-desktop  GAME SLOT #34
+					.assets__header
+						.referral-block__info
+							p.text-small Общая стоимость активов Game Slot #34
+							.assets-info.d-flex
+								.assets-info__left.d-flex
+									p.text-14 167 000 ₽
+									span
+										+tranding
+								.assets-info__right
+									p / 0,24 ETH
+
+					
+					.assets-type__body
+						.slot-block
+							.slot-block__cards
+								//========= ONE SLOT CARD ==========
+								.slot-card
+									.slot-card__img
+										img(src="./img/assets-card.png", width="48" alt="img")
+									.slot-card__info
+										.slot-card__info-row.d-flex
+											.slot-card__title
+												p Axie
+												p #0128421482
+											button.slot-card__btn Продать
+										.slot-card__info-row
+											.assets-info.d-flex
+												.assets-info__left.d-flex
+													p.text-12 67 000 ₽ 
+												.assets-info__right
+													p.text-12 / 204 USDT / 0,24 ETH
+								//========= ONE SLOT CARD ==========
+								.slot-card
+									.slot-card__img
+										img(src="./img/assets-card.png", width="48" alt="img")
+									.slot-card__info
+										.slot-card__info-row.d-flex
+											.slot-card__title
+												p Axie
+												p #0128421482
+											button.slot-card__btn Продать
+										.slot-card__info-row
+											.assets-info.d-flex
+												.assets-info__left.d-flex
+													p.text-12 67 000 ₽ 
+												.assets-info__right
+													p.text-12 / 204 USDT / 0,24 ETH
+								//========= ONE SLOT CARD ==========
+								.slot-card
+									.slot-card__img
+										img(src="./img/assets-card.png", width="48" alt="img")
+									.slot-card__info
+										.slot-card__info-row.d-flex
+											.slot-card__title
+												p Axie
+												p #0128421482
+											button.slot-card__btn Продать
+										.slot-card__info-row
+											.assets-info.d-flex
+												.assets-info__left.d-flex
+													p.text-12 67 000 ₽ 
+												.assets-info__right
+													p.text-12 / 204 USDT / 0,24 ETH
+								//========= ONE SLOT CARD ==========
+								.slot-card
+									.slot-card__img
+										img(src="./img/assets-card.png", width="48" alt="img")
+									.slot-card__info
+										.slot-card__info-row.d-flex
+											.slot-card__title
+												p Axie
+												p #0128421482
+											button.slot-card__btn Продать
+										.slot-card__info-row
+											.assets-info.d-flex
+												.assets-info__left.d-flex
+													p.text-12 67 000 ₽ 
+												.assets-info__right
+													p.text-12 / 204 USDT / 0,24 ETH
+											

@@ -1,0 +1,41 @@
+/* ============================
+блок справа в шапке , если залогинен с аватар
+==================================*/
+.header__user-menu{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.user-menu__item+.user-menu__item{
+	margin-left: 10px;
+}
+.header-top .header__user-menu{margin-left: auto;}
+
+.user-menu__notify{
+	position: relative;
+	cursor:pointer;
+	span{
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	}
+	
+	.notify-alert {
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		top: 6px;
+		right: 10px;
+		z-index: 2;
+		background-color: red;
+
+
+	}
+}
+.form-block .header__user-menu {
+	margin-left: auto;
+	@media(min-width: 768px){
+		display: none;
+	}
+}

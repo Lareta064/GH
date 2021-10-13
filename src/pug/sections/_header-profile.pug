@@ -1,0 +1,31 @@
+.header-top.header-top--profile
+	.header-top__content
+		// ===== menu icon ======
+		.header-top__icon
+			+menuIcon
+		// ===== LOGO ======
+		a(href="#!").logo
+			span
+				+logo
+			span игровой майнинг отель
+		.profile-tab-title
+			h2.title-2#active-title Пульс
+		// ===== user-block ======
+		.header__user-menu
+			.user-menu__item.user-menu__currency
+				.custom-select
+					.select-icon
+						+carret
+					.select-field
+						input(type="text" value="₽" readonly)
+					.select-list
+						ul
+							li.current(data-role="₽") ₽
+							li(data-role="$") $
+							li(data-role="€") €
+			.user-menu__item.user-menu__notify
+				.notify-alert
+				span
+					+notify
+			.user-menu__item.user-menu__ava
+				img(src="./img/profile-avatar.jpg", width="40" alt="user")

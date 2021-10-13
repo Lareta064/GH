@@ -1436,6 +1436,9 @@ button.close span {
 }
 
 .form-item.form-item--code {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1444,18 +1447,35 @@ button.close span {
   justify-content: center;
   margin-top: 13px;
   margin-bottom: 40px;
+  position: relative;
+}
+
+.form-item.form-item--code:after {
+  content: '';
+  width: 10px;
+  height: 5px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .form-item.form-item--code input {
   border: 0;
-  width: 24px;
   color: #121212;
   font-family: "Roboto Medium";
   font-size: 20px;
-  text-align: center;
-  border-bottom: 2px solid #4FB8FF;
   padding: 0;
+  padding-left: 4px;
   border-radius: 0;
+  letter-spacing: 12px;
+  display: inline;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(75%, #4FB8FF), color-stop(75%, transparent));
+  background-image: -o-linear-gradient(left, #4FB8FF 75%, transparent 75%);
+  background-image: linear-gradient(to right, #4FB8FF 75%, transparent 75%);
+  background-position: 0 bottom;
+  background-repeat: repeat-x;
+  background-size: 24px 2px;
 }
 
 .form-item.form-item--code input + input {

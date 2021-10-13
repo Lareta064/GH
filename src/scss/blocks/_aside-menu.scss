@@ -1,0 +1,127 @@
+
+.page-content__sidebar {
+	background-color: #FFEFD9;
+	padding: 4px;
+	height: 56px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	
+	@media(min-width:768px){
+		position: relative;
+		padding-left: 8px;
+		padding-top: 12px;
+		margin-top: 28px;	;
+		padding-right: 8px;
+		background-color: #fff;
+		width: 30%;
+		max-width: 304px;
+		height: auto;
+	}
+	@media(min-width:1200px) {
+		width: 25%;
+	}
+}
+.sidebar-menu {
+	nav{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		button{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+			border-radius: 4px;
+			height: 48px;
+			width: 19.5%;
+			
+			padding-top: 5px;
+			padding-bottom: 5px;
+			.text-small{
+				font-size: 12px;
+				line-height: 8px;
+				text-align: center;
+				letter-spacing: 0.2px;
+				color: #263238;
+				user-select: none;
+			}
+		}
+		button:hover{
+			opacity: .7;
+		}
+		button.active{
+			background: #2980B9;
+			svg path{fill: #fff;}
+			span{color: #fff;}
+			&:hover {
+				opacity: 1;
+			}
+			
+		}
+	}
+}
+@media(min-width:768px){
+	.sidebar-menu nav {
+		display: block;
+		button{
+			flex-direction: row;
+			padding-left: 11px;
+			padding-right: 11px;
+			width: 100%;
+			span+span {
+				margin-left: 11px;
+			}
+			.text-small {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+		button.active {
+			background: $lightGrey;
+			span {
+				color: #263238
+			}
+			svg path {
+				fill: #979797;
+			}
+		}
+	}
+}
+/*============= sidebar-menu--special ==========*/
+.sidebar-menu.sidebar-menu--special{
+	.icon-cell.icon-cell--mob{display: none;}
+	
+	@media(max-width:767px){
+	button[data-tab="chat"]{
+		position: relative;
+		&.active{
+			background-color:transparent;
+			
+			span{color: $text;}
+		}
+		.icon-cell.icon-cell--desk {
+			display: none;
+		}
+		.icon-cell.icon-cell--mob {
+			min-width: 68px;
+			max-width: 68px;
+			flex-shrink:0;
+			min-height: 68px;
+			max-height: 68px;
+			border: 6px solid #fefefe;
+			border-radius: 50%;
+			background-color: #4FB8FF;
+			margin-top:-48px;
+			box-shadow: 0px 4px 8px rgba(84, 110, 122, 0.24);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 7px;
+
+		}
+	}
+	}
+}

@@ -1,0 +1,27 @@
+.page-content__frame(data-content="finance")
+	.page-content__finance
+		.user-actions__list
+			.filter-menu.d-flex
+				button.active 7 дней
+				button 14 дней
+				button 1 мес
+				button 1 год
+			.user-actions__cards
+				//====== карточка ========
+				.action-card.action-card--img
+					.action-card__icon
+						img(src="./img/finance-tab.jpg", width="48" alt="img")
+					.action-card__left
+						p.text-16 Партнёрка
+						p.text-12 За привлечение Яковлева А.В.
+					.action-card__right
+						p.text-16.text-green + 3 495₽
+				//====== карточка ========
+				.action-card.action-card--img
+					.action-card__icon
+						img(src="./img/finance-tab.jpg", width="48" alt="img")
+					.action-card__left
+						p.text-16 Выплата
+						p.text-12 За привлечение Яковлева А.В.
+					.action-card__right
+						p.text-16.text-red - 123 495₽

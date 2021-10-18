@@ -1138,6 +1138,7 @@ button.close span {
   background-color: #fff;
   font-family: "Roboto Regular";
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .custom-select .select-list {

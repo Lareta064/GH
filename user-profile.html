@@ -314,10 +314,8 @@
           </div>
         </div>
         <!--===========РЕФЕРАЛЫ=============-->
-        <!-- В этой секции вложено два  отдельных блока: один показывается, если у пользователя нет рефералов, второй - если есть рефералы.  Структура одна и та же: referral-block__header, .referral-block__body, .referral-block__footer   Разница в контенте.  Сейчас закомментирован блок, кода нет рефералов и показывается второй блок -->
-
+        <!-- В этой секции вложено два  отдельных блока: один показывается, если у пользователя нт реферало, второй - если есть рефералы.  Структура одна и та же: referral-block__header, .referral-block__body, .referral-block__footer   Разница в контенте-->
         <!--============ ЕСЛИ ЕЩЕ НЕТ РЕФЕРАЛОВ ============-->
-
         <!--.page-content__frame(data-content="referral")
 					.page-content__referrals
 						.referral-block__header
@@ -334,14 +332,14 @@
 									+copy
 							.referral-block__btn
 								button.btn.btn--icon.btn--dark(type="button") Отправить ссылку
-
+								
 						.referral-block__footer
 							.text-info.d-flex
 								.info-icon
 									+info
 								p.text-16 У вас пока нет рефералов, но мы верим что они скоро появятся :)
-
-
+					
+					
 					-->
         <!--============ ЕСЛИ У ПОЛЬЗОВАТЕЛЯ ЕСТЬ РЕФЕРАЛЫ ============-->
         <div class="page-content__frame" data-content="referral">
@@ -461,7 +459,75 @@
         </div>
         <!--===========ЧАТ=============-->
         <div class="page-content__frame" data-content="chat">
-          <h1>chat</h1>
+         
+          <div class="page-content__chat">
+            <div class="chat-block">
+              <!--========= блок с сообщениями за один день  ===========-->
+              <div class="chat-block__list">
+                <h5>Вчера</h5>
+                <div class="chat-block__list-item">
+                  <div class="chat-text chat-text--user">
+                    <div class="chat-text__time">01:15 PM</div>
+                    <div class="chat-text__content">
+                      <p>Sed ligula erat,mauris sit eros a viverra amet dictum id?</p>
+                    </div>
+                  </div>
+                  <div class="chat-text chat-text--manager">
+                    <div class="chat-text__avatar">
+                      <img src="./img/chat.jpg" width="40" alt="img" />
+                    </div>
+                    <div class="chat-text__time">01:15 PM</div>
+                    <div class="chat-text__content">
+                      <span>Ирина Иванова (менеджер)</span>
+                      <p>Sed ligula erat,mauris sit eros a viverra amet dictum id?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--=========  блок с сообщениями за один день ===========-->
+              <div class="chat-block__list">
+                <h5>Сегодня</h5>
+                <div class="chat-block__list-item">
+                  <div class="chat-text chat-text--user">
+                    <div class="chat-text__time">01:15 PM</div>
+                    <div class="chat-text__content">
+                      <p>Sed ligula erat,mauris sit eros a viverra amet dictum id?</p>
+                    </div>
+                  </div>
+                  <div class="chat-text chat-text--manager">
+                    <div class="chat-text__avatar">
+                      <img src="./img/chat.jpg" width="40" alt="img" />
+                    </div>
+                    <div class="chat-text__time">01:15 PM</div>
+                    <div class="chat-text__content">
+                      <p>Sed ligula erat,mauris sit eros a viverra amet dictum id?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!-- ФОРМА ДЛЯ ВВОДА СООБЩЕНИЯ -->
+            <div class="chat-form-wrapper">
+              <form class="chat-form" action="">
+                <div class="chat-form-attach">
+                  <label for="chat-attach">
+                    <input id="chat-attach" type="file" />
+                  </label>
+                </div>
+                <div class="chat-form-input">
+                  <input type="text" placeholder="Напишите сообщение" />
+                </div>
+                <div class="chat-form-right d-flex">
+                  <div class="chat-form-mic">
+                    <button type="button"></button>
+                  </div>
+                  <div class="chat-form-btn">
+                    <button type="submit"></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
         <!--===========ФИНАНСЫ=============-->
         <div class="page-content__frame" data-content="finance">
